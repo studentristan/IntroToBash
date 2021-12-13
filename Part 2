@@ -1,0 +1,14 @@
+sleep 2000
+echo '$!'
+banana=$!
+
+kill -TSTP $banana
+
+sleep 1000;sleep 1000;ls -alR / > flist &
+
+fg $banana
+kill -CONT $banana
+kill -TSTP $banana
+kill -STOP $banana
+
+echo "all done!"
