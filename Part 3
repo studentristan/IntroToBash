@@ -1,0 +1,6 @@
+sed 's/@[a-zA-Z_.-]*.org/@starhealth.org/' csvTest > csvTestv2.0  ##searching around for a way to do this using "sed" in the search was pointless. RegEx comes in for the win lol
+
+sed 's/\([[:digit:]]\{3\}\)\([[:digit:]]\{3\}\)\([[:digit:]]\{4\}\)/(\1)\2-\3/g' csvTestv2.0 > csvTest  ##modification from stack Overflow (https://stackoverflow.com/questions/36429836/i-need-a-sed-command-to-change-a-phone-number-format-from-999-999-9999-to-9999)
+
+
+cat csvTest
